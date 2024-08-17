@@ -35,6 +35,7 @@ public class Rest {
         outputStream.close();
         int code = httpURLConnection.getResponseCode();
         System.out.println("Response code was "+code);
+        //lol
 
         if (code == httpURLConnection.HTTP_OK) {
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(httpURLConnection.getInputStream()));
