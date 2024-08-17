@@ -39,7 +39,7 @@
         android:layout_height="74dp"
         android:layout_marginBottom="192dp"
         android:ems="10"
-        android:inputType="numberPassword"
+        android:inputType="text|textPassword"
         android:text="@string/password_field"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"

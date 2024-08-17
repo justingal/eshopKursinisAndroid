@@ -57,15 +57,10 @@ public class MainActivity extends AppCompatActivity {
                 String response = Rest.sendPost(Constants.VALIDATE_USER, jsonData);
                 handler.post(() -> {
                     if (response != null && !response.equals("Error")) {
-                        // Check for specific expected response if necessary, such as a JSON key
-                        if (response.contains("Success")) { // Example: Check if response contains specific key or message
                             Intent intent = new Intent(MainActivity.this, ProductsActivity.class);
                             startActivity(intent);
-                        } else {
-                            Toast.makeText(MainActivity.this, "Invalid login credentials.", Toast.LENGTH_SHORT).show();
-                        }
                     } else {
-                        Toast.makeText(MainActivity.this, "Error connecting to server. Please try again.", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, "Invalid credentials", Toast.LENGTH_SHORT).show();
                     }
                 });
             } catch (IOException e) {

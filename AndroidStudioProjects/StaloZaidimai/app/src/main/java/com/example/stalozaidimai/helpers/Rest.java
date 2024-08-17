@@ -51,4 +51,108 @@ public class Rest {
             return "Error";
         }
     }
+
+    public static String sendDelete(String deleteUrl) throws IOException {
+
+        URL url = new URL(deleteUrl);
+        HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
+        httpURLConnection.setRequestMethod("DELETE");
+        //httpURLConnection.setConnectTimeout(20000);
+        //httpURLConnection.setReadTimeout(20000);
+        httpURLConnection.setRequestProperty("Content-type", "application/json; charset = UTF-8");
+        httpURLConnection.setRequestProperty("Accept", "*/*");
+        //httpURLConnection.setRequestProperty("Content-Length", String.valueOf(jsonInfo.length()));
+        //httpURLConnection.setDoInput(true);
+        //httpURLConnection.setDoOutput(true);
+
+
+        int code = httpURLConnection.getResponseCode();
+        System.out.println("Response code was "+code);
+
+        if (code == httpURLConnection.HTTP_OK) {
+            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(httpURLConnection.getInputStream()));
+            String line;
+            StringBuffer response = new StringBuffer();
+
+            while ((line = bufferedReader.readLine()) != null) {
+                response.append(line);
+            }
+            bufferedReader.close();
+            return response.toString();
+        } else {
+            return "Error";
+        }
+    }
+
+    public static String sendGet(String getUrl) throws IOException {
+
+        URL url = new URL(getUrl);
+        HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
+        httpURLConnection.setRequestMethod("GET");
+        //httpURLConnection.setConnectTimeout(20000);
+        //httpURLConnection.setReadTimeout(20000);
+        httpURLConnection.setRequestProperty("Content-type", "application/json; charset = UTF-8");
+        httpURLConnection.setRequestProperty("Accept", "*/*");
+        //httpURLConnection.setRequestProperty("Content-Length", String.valueOf(jsonInfo.length()));
+        //httpURLConnection.setDoInput(true);
+        //httpURLConnection.setDoOutput(true);
+
+
+        int code = httpURLConnection.getResponseCode();
+        System.out.println("Response code was "+code);
+
+        if (code == httpURLConnection.HTTP_OK) {
+            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(httpURLConnection.getInputStream()));
+            String line;
+            StringBuffer response = new StringBuffer();
+
+            while ((line = bufferedReader.readLine()) != null) {
+                response.append(line);
+            }
+            bufferedReader.close();
+            return response.toString();
+        } else {
+            return "Error";
+        }
+    }
+
+
+    public static String sendPut(String putUrl, String jsonInfo) throws IOException {
+
+        URL url = new URL(putUrl);
+        HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
+        httpURLConnection.setRequestMethod("PUT");
+        httpURLConnection.setConnectTimeout(20000);
+        httpURLConnection.setReadTimeout(20000);
+        httpURLConnection.setRequestProperty("Content-type", "application/json; charset = UTF-8");
+        httpURLConnection.setRequestProperty("Accept", "*/*");
+        //httpURLConnection.setRequestProperty("Content-Length", String.valueOf(jsonInfo.length()));
+        httpURLConnection.setDoInput(true);
+        httpURLConnection.setDoOutput(true);
+
+        OutputStream outputStream = httpURLConnection.getOutputStream();
+        //outputStream = httpURLConnection.getOutputStream();
+        bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream));
+        bufferedWriter.write(jsonInfo);
+
+        bufferedWriter.close();
+        outputStream.close();
+        int code = httpURLConnection.getResponseCode();
+        System.out.println("Response code was " + code);
+        //lol
+
+        if (code == httpURLConnection.HTTP_OK) {
+            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(httpURLConnection.getInputStream()));
+            String line;
+            StringBuffer response = new StringBuffer();
+
+            while ((line = bufferedReader.readLine()) != null) {
+                response.append(line);
+            }
+            bufferedReader.close();
+            return response.toString();
+        } else {
+            return "Error";
+        }
+    }
 }
