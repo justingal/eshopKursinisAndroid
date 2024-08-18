@@ -8,7 +8,7 @@ import java.util.List;
 
 
 
-public abstract class User implements Serializable {
+public class User implements Serializable {
 
 
     int id;
@@ -20,6 +20,30 @@ public abstract class User implements Serializable {
 
 
     public User() {
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public void setBirthDate(LocalDate birthDate) {
+        this.birthDate = birthDate;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
     }
 
     public User(int id, String login, String password, LocalDate birthDate, String name, String surname) {

@@ -3,7 +3,13 @@
     <string name="login_field">Enter login:</string>
     <string name="password_field">Enter password:</string>
     <string name="login_button">Login!</string>
-    <string name="view_account_button">VIEW ACCOUNT</string>
+    <string name="productTab_label">Products Tab</string>
+    <string name="warehouseTab_label">Warehouses Tab</string>
+    <string name="usersTab_label">Users Tab</string>
+
+
+    <string name="view_users_button">VIEW USERS</string>
+    <string name="view_orders_button">VIEW ORDERS</string>
     <string name="view_warehouses_button">VIEW WAREHOUSES</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
