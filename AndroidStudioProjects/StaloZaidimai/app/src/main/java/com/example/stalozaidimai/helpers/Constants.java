@@ -7,4 +7,5 @@ public class Constants {
     public static final String GET_PRODUCTS = BASE_URL + "/products";  // Example
     public static final String GET_USERS = BASE_URL + "/users";
     public static final String GET_WAREHOUSES = BASE_URL + "/warehouses";
+
 }

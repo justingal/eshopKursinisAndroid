@@ -1,9 +1,6 @@
-package com.example.stalozaidimai;
-
-import static com.example.stalozaidimai.helpers.Constants.VALIDATE_USER;
+package com.example.stalozaidimai.Activities;
 
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -17,6 +14,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.stalozaidimai.R;
 import com.example.stalozaidimai.helpers.Constants;
 import com.example.stalozaidimai.helpers.Rest;
 

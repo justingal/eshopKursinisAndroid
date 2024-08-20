@@ -134,7 +134,7 @@ public class Rest {
         //outputStream = httpURLConnection.getOutputStream();
         bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream));
         bufferedWriter.write(jsonInfo);
-
+        bufferedWriter.flush();
         bufferedWriter.close();
         outputStream.close();
         int code = httpURLConnection.getResponseCode();

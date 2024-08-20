@@ -18,16 +18,16 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31" >
         <activity
-            android:name=".WarehousesActivity"
+            android:name=".Activities.WarehousesActivity"
             android:exported="false" />
         <activity
-            android:name=".UsersActivity"
+            android:name=".Activities.UsersActivity"
             android:exported="false" />
         <activity
-            android:name=".ProductsActivity"
+            android:name=".Activities.ProductsActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Activities.MainActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

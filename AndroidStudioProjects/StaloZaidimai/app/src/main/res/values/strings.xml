@@ -7,7 +7,11 @@
     <string name="warehouseTab_label">Warehouses Tab</string>
     <string name="usersTab_label">Users Tab</string>
 
-
+    <string name="warehouseTitle_text">Title</string>
+    <string name="warehouseAddress_text">Address</string>
+    <string name="warehouseId_text">ID</string>
+    <string name="warehouseUpdate_button">Update Warehouse</string>
+    <string name="warehouseDelete_button">Delete Warehouse</string>
     <string name="view_users_button">VIEW USERS</string>
     <string name="view_orders_button">VIEW ORDERS</string>
     <string name="view_warehouses_button">VIEW WAREHOUSES</string>

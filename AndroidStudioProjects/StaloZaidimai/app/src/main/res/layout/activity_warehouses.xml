@@ -6,7 +6,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".WarehousesActivity">
+    tools:context=".Activities.WarehousesActivity">
 
   <TextView
       android:id="@+id/textView"
@@ -23,6 +23,107 @@
       android:id="@+id/warehousesListView"
       android:layout_width="339dp"
       android:layout_height="253dp"
-      tools:layout_editor_absoluteX="28dp"
-      tools:layout_editor_absoluteY="50dp" />
+      android:layout_marginTop="52dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <EditText
+      android:id="@+id/editWarehouseTitle"
+      android:layout_width="235dp"
+      android:layout_height="74dp"
+      android:layout_marginBottom="104dp"
+      android:ems="10"
+      android:inputType="text"
+      android:text="@string/warehouseTitle_text"
+      app:layout_constraintBottom_toBottomOf="@+id/editWarehouseAddress"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.653"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="1.0" />
+
+  <EditText
+      android:id="@+id/editWarehouseAddress"
+      android:layout_width="226dp"
+      android:layout_height="62dp"
+      android:layout_marginBottom="168dp"
+      android:ems="10"
+      android:inputType="text"
+      android:text="@string/warehouseAddress_text"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.67"
+      app:layout_constraintStart_toStartOf="parent" />
+
+  <TextView
+      android:id="@+id/warehouseTitleLabel"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="92dp"
+      android:text="Title"
+      app:layout_constraintBottom_toTopOf="@+id/warehouseAdressLabel"
+      app:layout_constraintEnd_toStartOf="@+id/editWarehouseTitle"
+      app:layout_constraintHorizontal_bias="0.568"
+      app:layout_constraintStart_toStartOf="parent" />
+
+  <TextView
+      android:id="@+id/warehouseAdressLabel"
+      android:layout_width="69dp"
+      android:layout_height="40dp"
+      android:layout_marginBottom="176dp"
+      android:text="Address"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toStartOf="@+id/editWarehouseAddress"
+      app:layout_constraintStart_toStartOf="parent" />
+
+  <Button
+      android:id="@+id/button"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="48dp"
+      android:onClick="updateWarehouse"
+      android:text="@string/warehouseUpdate_button"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.116"
+      app:layout_constraintStart_toStartOf="parent" />
+
+  <TextView
+      android:id="@+id/warehouseIdLabel"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="368dp"
+      android:text="ID"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.143"
+      app:layout_constraintStart_toStartOf="parent" />
+
+  <EditText
+      android:id="@+id/editWarehouseID"
+      android:layout_width="233dp"
+      android:layout_height="56dp"
+      android:layout_marginBottom="12dp"
+      android:ems="10"
+      android:inputType="text"
+      android:text="@string/warehouseId_text"
+      app:layout_constraintBottom_toTopOf="@+id/editWarehouseTitle"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.646"
+      app:layout_constraintStart_toStartOf="parent" />
+
+  <Button
+      android:id="@+id/deleteWarehouseButton"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="48dp"
+      android:onClick="deleteWarehouse"
+      android:text="@string/warehouseDelete_button"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.886"
+      app:layout_constraintStart_toStartOf="parent" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
